@@ -1,6 +1,10 @@
 #ifndef PAGECONTROLLER_H
 #define PAGECONTROLLER_H
 
+#include "Page.h"
+#include "Display.h"
+#include "MainWatch.h"
+
 class PageController {
 public:
     PageController();
@@ -12,6 +16,8 @@ public:
 
 private:
     // Add your private member variables and functions here
+    int currentPage;
+    int totalPages;
 };
 
 
