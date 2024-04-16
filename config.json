@@ -1,0 +1,12 @@
+{
+    "total_no_of_pages": 6,
+    "prev_button": "D6",
+    "next_button": "D7",
+    "setup_button": "D5",
+    "oled_address": "0x3C",
+    "wifi_ssid": "",
+    "wifi_password": "",
+    "openweather_api_key": "",
+    "openweather_city": "",
+    "openweather_country_code": ""
+}
