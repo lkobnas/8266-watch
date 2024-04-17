@@ -12,7 +12,7 @@ private:
     public:
         PageController(Display* d){
             display = d;
-            currentPage = new MainWatch();
+            currentPage = new MainWatch(display);
         }
 
         ~PageController() {
@@ -35,10 +35,10 @@ private:
         switch (page)
         {
         case 0:
-            currentPage = new MainWatch();
+            currentPage = new MainWatch(display);
             break;
         case 1:
-            currentPage = new MainWatch();
+            currentPage = new MainWatch(display);
             break;
         }
         currentPage->display();

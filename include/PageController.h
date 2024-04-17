@@ -7,7 +7,7 @@
 
 class PageController {
 public:
-    PageController();
+    PageController(Display* d);
     ~PageController();
 
     // Add your public member functions here
