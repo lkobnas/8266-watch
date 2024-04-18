@@ -19,6 +19,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  PageController* pageController = PageController::getInstance(display);
 }
 
 // put function definitions here:
