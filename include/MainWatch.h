@@ -8,7 +8,6 @@
 class MainWatch : public Page{
 public:
     MainWatch(Display* d);
-    ~MainWatch();
 
     void getWeather();
     void getTime();
