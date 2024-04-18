@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "PageController.h"
 
 
@@ -9,6 +7,8 @@ class PageController {
         Page* currentPage;
         Display* display;
         const int totalPages = 6;
+
+        RTC_DS3231 rtc;
 
         void displayPage(int page) {
             // Implement this function to display the given page
@@ -29,6 +29,8 @@ class PageController {
         PageController(Display* d){
             display = d;
             currentPage = new MainWatch(display);
+            rtc.begin();
+            displayPage(0);
         }
 
         ~PageController() {

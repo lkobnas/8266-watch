@@ -9,9 +9,7 @@ class MainWatch : public Page{
 public:
     MainWatch(Display* d);
 
-    void getWeather();
-    void getTime();
-    void getDate();
+    void getInformation();
     void display() override;
     int getPageNumber() override;
 };

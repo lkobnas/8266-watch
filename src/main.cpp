@@ -2,18 +2,15 @@
 #include "PageController.h"
 #include "Display.h"
 
-// put function declarations here:
-int myFunction(int, int);
+
+Display* display;
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
 
   //init
-
-  Display* display = new Display(0x3C);
-  PageController* pageController = new PageController(display);
-  pageController->nextPage();
+  display = new Display(0x3C);
 
 }
 
