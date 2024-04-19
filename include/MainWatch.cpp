@@ -77,7 +77,6 @@ public:
     void getInformation() {
         getTemperature();
         getDateTime();
-
     }
     
     void display()
@@ -86,9 +85,9 @@ public:
         display->setTextSize(1);
         display->setTextColor(WHITE);
         if(checkDay(hour)){
-            display->drawBitmap(111, 3, myBitmapsunny_day, 16, 16, WHITE);
+            display->drawBitmap(111, 3, myBitmapsunny_day, 16, 16, 1);
         }else{
-            display->drawBitmap(111, 3, myBitmapMoon, 16, 16, WHITE);
+            display->drawBitmap(111, 3, myBitmapMoon, 16, 16, 1);
         }
 
         fillSpaceForDowDisplay(daysOfTheWeek);
