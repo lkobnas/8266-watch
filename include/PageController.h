@@ -17,6 +17,7 @@ public:
     // Add your public member functions here
     void nextPage();
     void previousPage();
+    void displayCurrentPage();
 
 private:
     // Add your private member variables and functions here

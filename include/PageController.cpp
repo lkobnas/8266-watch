@@ -49,6 +49,10 @@ class PageController {
             return instance;
         }
 
+        void displayCurrentPage() {
+            currentPage->display();
+        }
+
         void nextPage() {
             int nextpage = (currentPage->getPageNumber() % totalPages)+ 1;
             displayPage(nextpage);
