@@ -11,7 +11,7 @@
 
 class PageController {
 public:
-    PageController(Display* d);
+    PageController(byte displayAddress);
     ~PageController();
     static PageController* getInstance(Display* d);
     // Add your public member functions here
@@ -21,8 +21,13 @@ public:
 
 private:
     // Add your private member variables and functions here
-    int currentPage;
-    int totalPages;
+    static PageController* instance;
+    Page* currentPage;
+    Display* display;
+    const int totalPages = 6;
+
+    RTC_DS3231 rtc;
+    void displayPage(int page);
 };
 
 
