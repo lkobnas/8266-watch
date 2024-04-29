@@ -5,7 +5,7 @@ const char daysOfTheWeekText[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday
 const char monthText[12][4] = {"JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"};
 
 
-MainWatch::MainWatch(Display* display) : display(display) {
+MainWatch::MainWatch(Display* d) : display(d) {
     if (!rtc.begin()) {
         Serial.println("Couldn't find RTC");
         while (1);
@@ -14,6 +14,7 @@ MainWatch::MainWatch(Display* display) : display(display) {
         Serial.println("RTC lost power, let's set the time!");
         rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
     }
+    
 }
 void MainWatch::getInformation() {
     getTemperature();

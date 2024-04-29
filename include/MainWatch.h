@@ -9,20 +9,22 @@
 #include "Bitmap.h"
 
 class MainWatch : public Page{
-public:
-                MainWatch(Display* d);
 
-                void getInformation();
-                void displayScreen();
-                int getPageNumber() override;
+    public:
+        MainWatch(Display* d);
 
-            private:
-                RTC_DS3231 rtc;
-                DateTime now;
-                uint16_t year;
-                uint8_t month, day, hour, minute, second;
-                uint8_t daysOfTheWeek;
-                float temperature;
+        void getInformation();
+        void displayScreen();
+        int getPageNumber() override;
+
+    private:
+        Display* d
+        RTC_DS3231 rtc;
+        DateTime now;
+        uint16_t year;
+        uint8_t month, day, hour, minute, second;
+        uint8_t daysOfTheWeek;
+        float temperature;
 
         void getTemperature();
 
