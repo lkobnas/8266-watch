@@ -4,8 +4,6 @@
 PageController::PageController(byte displayAddress){
     display = new Display(displayAddress);
     currentPage = new MainWatch(display);
-    rtc.begin();
-    displayPage(0);
 }
 
 PageController::~PageController() {
@@ -15,6 +13,10 @@ PageController::~PageController() {
 
 void PageController::displayCurrentPage() {
     currentPage->display();
+}
+
+void PageController::init(){
+    rtc.begin();
 }
 
 void PageController::nextPage() {

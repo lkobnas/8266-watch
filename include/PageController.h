@@ -14,20 +14,27 @@ public:
     PageController(byte displayAddress);
     ~PageController();
     static PageController* getInstance(Display* d);
-    // Add your public member functions here
+
+    // Public member functions
     void nextPage();
     void previousPage();
     void displayCurrentPage();
+    void init();
 
 private:
-    // Add your private member variables and functions here
+    // Private member variables
     static PageController* instance;
     Page* currentPage;
-    Display* display;
     const int totalPages = 6;
-
+    
+    // Sensors and Actuators
+    Display* display;
     RTC_DS3231 rtc;
+
+    // Private member functions
     void displayPage(int page);
+    
+    
 };
 
 
