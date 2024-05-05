@@ -12,7 +12,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //pageController->getInstance(display);
-  pageController->displayCurrentPage();
+  //pageController->displayCurrentPage();
 }
 
 // put function definitions here:

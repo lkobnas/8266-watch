@@ -40,6 +40,9 @@ void PageController::displayPage(int page) {
     case 1:
         currentPage = new MainWatch(display);
         break;
+    
+    default:
+        currentPage = new MainWatch(display);
     }
     currentPage->displayScreen();
 }
