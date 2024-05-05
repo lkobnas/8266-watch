@@ -13,17 +13,16 @@ class PageController {
 public:
     PageController(byte displayAddress);
     ~PageController();
-    static PageController* getInstance(Display* d);
 
     // Public member functions
-    void nextPage();
-    void previousPage();
     void displayCurrentPage();
     void init();
+    void nextPage();
+    void previousPage();
+
 
 private:
     // Private member variables
-    static PageController* instance;
     Page* currentPage;
     const int totalPages = 6;
     

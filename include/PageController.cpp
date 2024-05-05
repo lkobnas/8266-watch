@@ -12,7 +12,7 @@ PageController::~PageController() {
 
 
 void PageController::displayCurrentPage() {
-    currentPage->display();
+    currentPage->displayScreen();
 }
 
 void PageController::init(){
@@ -41,5 +41,5 @@ void PageController::displayPage(int page) {
         currentPage = new MainWatch(display);
         break;
     }
-    currentPage->display();
+    currentPage->displayScreen();
 }
