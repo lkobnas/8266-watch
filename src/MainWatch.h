@@ -18,7 +18,7 @@ class MainWatch : public Page{
         int getPageNumber() override;
 
     private:
-        Display* d;
+        Display* display;
         RTC_DS3231 rtc;
         DateTime now;
         uint16_t year;

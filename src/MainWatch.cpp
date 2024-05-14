@@ -6,6 +6,7 @@ const char monthText[12][4] = {"JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","
 
 
 MainWatch::MainWatch(Display* d) : display(d) {
+    display = d;
     if (!rtc.begin()) {
         Serial.println("Couldn't find RTC");
         while (1);
@@ -15,7 +16,7 @@ MainWatch::MainWatch(Display* d) : display(d) {
         rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
     }
     
-}
+};
 void MainWatch::getInformation() {
     getTemperature();
     getDateTime();
