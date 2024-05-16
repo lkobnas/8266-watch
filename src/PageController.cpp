@@ -6,10 +6,6 @@ PageController::PageController(byte displayAddress){
     currentPage = new MainWatch(display);
 }
 
-PageController::~PageController() {
-    delete currentPage;
-}
-
 
 void PageController::displayCurrentPage() {
     currentPage->displayScreen();
